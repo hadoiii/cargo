@@ -7,3 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/customers',[\App\Http\Controllers\CustomerController::class,'index']);
+Route::post('/customers',[\App\Http\Controllers\CustomerController::class,'store']);
+Route::get('/customers/create',[\App\Http\Controllers\CustomerController::class,'create']);
