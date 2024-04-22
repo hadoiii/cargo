@@ -358,6 +358,13 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-4">
+        @if(session()->has('success'))    
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success">{{ session('success')  }}</div>
+            </div>
+        </div>
+        @endif
       @yield('content')
       <footer class="footer pt-3  ">
         <div class="container-fluid">
