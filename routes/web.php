@@ -6,6 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard',[\App\Http\Controllers\DashboardController::class,'index']);
 Route::get('/customers',[\App\Http\Controllers\CustomerController::class,'index']);
 Route::post('/customers',[\App\Http\Controllers\CustomerController::class,'store']);
 Route::get('/customers/create',[\App\Http\Controllers\CustomerController::class,'create']);
